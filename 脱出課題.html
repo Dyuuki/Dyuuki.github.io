@@ -1,0 +1,74 @@
+<DOCTYPE html>
+
+    <html lang="ja">
+
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="脱出stylesheet.css">
+        <title>スケジュール日記</title>
+    </head>
+
+    </html>
+
+    <body>
+        <div>
+            <h1>日記</h1>
+            <div>
+            <label>
+                <textarea name="content" id="content" cols="100" rows="20"></textarea>
+                <input type="submit" id="checkButton" value="送信">
+            </label>
+                
+            <h1>今日の過ごし方</h1>
+            <label class="nikki">
+                <input type="time" type="number" class="box" id="zikan" value="00:00">
+                <input type="text" value="" type="number" class="box" id="habit">
+                <input type="button" value="完了" id="checkButton" onclick="calc();">
+
+                <br><input id="result">
+            </label>
+                <h2>円</h2>
+
+                <div class="pie"></div>
+                <script src="./js/main3;.js" id="Javascript">
+
+                </script>
+            <div>
+                <script>
+                    date=new Date().toLocaleDateString();
+                    document.write(date);
+                </script>
+            </div>
+            <p id="msg"></p>
+     
+                <table>
+                    <tr>
+                        <th> </th>
+                        <th>今日の出来事</th>
+                        <th>感じたストレス（/10）</th>
+                    </tr>
+                    <tr>
+                        <th>1つ目</th>
+                        <td>　　</td>
+                        <td>　　</td>
+                    </tr>
+                    <tr>
+                        <th>2つ目</th>
+                        <td>　　</td>
+                        <td>　　</td>
+                    </tr>
+                </table>
+            <script>
+                function butotnClick() {
+                    msg.innerText = reviewTextarea.value;
+                }
+
+                let reviewTextarea = document.getElementById('content');
+                let msg = document.getElementById('msg');
+
+                let checkButton=document.getElementById('checkButton');
+                checkButton.addEventListener('click', butotnClick);
+            </script>
+        </div>
+    </body>
